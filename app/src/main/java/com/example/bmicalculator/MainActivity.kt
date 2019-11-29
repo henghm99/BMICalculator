@@ -3,6 +3,7 @@ package com.example.bmicalculator
 import android.media.Image
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Gravity
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
@@ -20,7 +21,9 @@ class MainActivity : AppCompatActivity() {
             try {
                 calcBtnOnclick(it)
             } catch (e: Exception) {
-                Toast.makeText(this,"Invalid input!", Toast.LENGTH_LONG).show()
+                val toast: Toast = Toast.makeText(this,"Invalid input!", Toast.LENGTH_LONG)
+                toast.setGravity(Gravity.CENTER, 0, 0)
+                toast.show()
             }
         }
 
