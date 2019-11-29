@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
             try {
                 calcBtnOnclick(it)
             } catch (e: Exception) {
-                Toast.makeText(this,"Please enter height/ weight", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this,"Invalid input!", Toast.LENGTH_LONG).show()
             }
         }
 
