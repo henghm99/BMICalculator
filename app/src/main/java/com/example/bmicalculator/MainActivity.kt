@@ -6,7 +6,9 @@ import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
+import java.lang.Exception
 
 class MainActivity : AppCompatActivity() {
 
@@ -15,7 +17,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         button_calc.setOnClickListener {
-            calcBtnOnclick(it)
+            try {
+                calcBtnOnclick(it)
+            } catch (e: Exception) {
+                Toast.makeText(this,"Please enter height/ weight", Toast.LENGTH_SHORT).show()
+            }
         }
 
         button_reset.setOnClickListener {
